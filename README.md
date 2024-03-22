@@ -86,14 +86,14 @@ docker run -d \
 容器是通过在运行时传递的参数（如上述所示）进行配置的。这些参数用冒号分隔，并分别表示`< external >:< internal >`。例如，`-p 8080:80` 将使容器内的80端口可以从容器外部的主机 IP 的8080端口上进行访问。
 |Parameter|Function|
 |---|---|
-|-p 3000|Chromium desktop gui.|
-|-p 3001|HTTPS Chromium desktop gui.|
+|-p 3000|Wechat desktop gui.|
+|-p 3001|HTTPS Wechat desktop gui.|
 |-e PUID=1000|for UserID - see below for explanation|
 |-e PGID=1000|for GroupID - see below for explanation|
 |-e TZ=Etc/UTC|specify a timezone to use, see this list.|
 |-v /config|Users home directory in the container, stores local files and settings|
 |--shm-size=|This is needed for any modern website to function like youtube.|
-|--security-opt seccomp=unconfined|For Docker Engine only, many modern gui apps need this to function on older hosts as syscalls are unknown to Docker. Chromium runs in no-sandbox test mode without it.|
+|--security-opt seccomp=unconfined|For Docker Engine only, many modern gui apps need this to function on older hosts as syscalls are unknown to Docker. Wechat runs in no-sandbox test mode without it.|
 ## 通过域名访问
 ### Nginx配置
 ```conf
