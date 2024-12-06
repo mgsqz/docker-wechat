@@ -1,9 +1,4 @@
-# default file copies first run
-if [ ! -f $HOME/.config/tint2/tint2rc ]; then
-    mkdir -p $HOME/.config/tint2
-    cp /defaults/tint2rc $HOME/.config/tint2/tint2rc
-fi
-
+#!/bin/bash
 # set fcitx5 config
 if [ ! -f $HOME/.config/fcitx5/config ];then
     mkdir -p $HOME/.config/fcitx5
@@ -114,7 +109,6 @@ if [ ! -f $HOME/.config/fcitx5/profile ];then
 	EOF
 fi
 
-# Start UI
-tint2 &
+# Start
 fcitx5 &
-wechat
+wrapped-wechat ${WECHAT_CLI}

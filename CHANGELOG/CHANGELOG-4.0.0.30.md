@@ -1,13 +1,16 @@
 <!-- BEGIN MUNGE: GENERATED_TOC -->
-- [v4.0.0.30-tint2](#v4.0.0.30-tint2)
+- [v4.0.0.30](#v4.0.0.30)
   - [Changelog since v1.0.0.0](#changelog-since-v1.0.0.0)
     - [Other notable changes](#other-notable-changes)
 <!-- END MUNGE: GENERATED_TOC -->
 
 <!-- NEW RELEASE NOTES ENTRY -->
 
+# v4.0.0.30
+## Version
+- v4.0.0.30
+- v4.0.0.30-tint2
 
-# v4.0.0.30-tint2
 ## Changelog since v1.0.0.0
 ### Other notable changes
 - Wechat版本更新为4.0.0.30

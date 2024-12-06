@@ -42,7 +42,7 @@
 ```yaml
 services:
   wechat:
-    image: sassv/wechat:tint2-4.0.0.30
+    image: sassv/wechat:latest
     container_name: wechat
     security_opt:
       - seccomp:unconfined #optional
@@ -80,7 +80,7 @@ docker run -d \
   --device /dev/dri:/dev/dri \
   --shm-size="4gb" \
   --restart unless-stopped \
-  sassv/wechat:tint2-4.0.0.30
+  sassv/wechat:latest
 ```
 ## 参数
 容器是通过在运行时传递的参数（如上述所示）进行配置的。这些参数用冒号分隔，并分别表示`< external >:< internal >`。例如，`-p 8080:80` 将使容器内的80端口可以从容器外部的主机 IP 的8080端口上进行访问。

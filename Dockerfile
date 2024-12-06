@@ -16,10 +16,6 @@ RUN \
     https://dldir1v6.qq.com/weixin/Universal/Linux/WeChatLinux_x86_64.deb && \
   echo "**** install packages ****" && \
   apt-get update && \
-  apt-get install --no-install-recommends -y \
-    libqt5gui5 \
-    thunar \
-    tint2 && \
   apt-get install -y --no-install-recommends \
     libatomic1 \
     libxkbcommon-x11-dev \
@@ -30,16 +26,10 @@ RUN \
   apt-get install -y --no-install-recommends \
     /tmp/WeChatLinux_x86_64.deb
 RUN \
-  apt-get install -y \
-    fonts-noto-cjk \
-    im-config \
-    zenity \
+  echo "**** add fcitx5 ****" && \
+  apt-get install -y --no-install-recommends \
     fcitx5 \
     fcitx5-chinese-addons && \
-  echo "**** openbox tweaks ****" && \
-  sed -i \
-    's/NLMC/NLIMC/g' \
-    /etc/xdg/openbox/rc.xml && \
   echo "**** cleanup ****" && \
   apt-get autoclean && \
   rm -rf \
