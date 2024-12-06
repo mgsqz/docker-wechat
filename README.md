@@ -42,7 +42,7 @@
 ```yaml
 services:
   wechat:
-    image: sassv/wechat:latest
+    image: sassv/wechat-tint2:latest
     container_name: wechat
     security_opt:
       - seccomp:unconfined #optional
@@ -80,7 +80,7 @@ docker run -d \
   --device /dev/dri:/dev/dri \
   --shm-size="4gb" \
   --restart unless-stopped \
-  sassv/wechat:latest
+  sassv/wechat-tint2:latest
 ```
 ## 参数
 容器是通过在运行时传递的参数（如上述所示）进行配置的。这些参数用冒号分隔，并分别表示`< external >:< internal >`。例如，`-p 8080:80` 将使容器内的80端口可以从容器外部的主机 IP 的8080端口上进行访问。
@@ -137,13 +137,8 @@ server {
 }
 ```
 ## 输入法
-此镜像默认已安装中文语言包、fcitx输入法框架、googlepinyin输入法。但是还需要对输入法进行配置。
-- 浏览器打开Web界面[http://yourhost:3000](http://yourhost:3000)
-- 激活输入法(点击右一小企鹅图标)
-- 配置输入法(点击左一小企鹅图标)
-- 在输入法配置界面中全局配置选项卡设置切换激活/非激活输入法的快捷键(建议shift+空格)
+此镜像默认已安装中文语言包、fcitx5输入法框架、pinyin输入法, 使用`Left Shift`切换中英文输入法。
 
 ## 已知问题
 - KasmVNC不能使用启用本地输入法选项
-- 微信不能接打语音电话和视频电话(微信会崩溃)
 
