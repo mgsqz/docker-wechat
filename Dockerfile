@@ -22,7 +22,8 @@ RUN \
     libxcb-icccm4-dev \
     libxcb-image0-dev \
     libxcb-render-util0-dev \
-    libxcb-keysyms1-dev && \
+    libxcb-keysyms1-dev \
+    zenity && \
   apt-get install -y --no-install-recommends \
     /tmp/WeChatLinux_x86_64.deb
 RUN \
