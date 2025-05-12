@@ -1,5 +1,5 @@
 # [sassv/wechat](https://github.com/henry-proj/docker-wechat)
-可在网页访问的微信，使用的Linux原生版本微信，版本号为wechat-4.0.0.30，基础镜像来自于[LinuxServer.io](https://www.linuxserver.io/)
+可在网页访问的微信，使用的Linux原生版本微信，基础镜像来自于[LinuxServer.io](https://www.linuxserver.io/)
 ![view](./img/view.png)
 
 ## 支持的架构
