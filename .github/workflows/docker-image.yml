@@ -31,7 +31,7 @@ jobs:
 
       - name: Build and push Docker images
         run: |
-          IMAGE_NAME="sassv/wechat"
+          IMAGE_NAME="firephoenixfly/wechat"
           VERSION="${{ env.VERSION }}"
 
           docker build -t $IMAGE_NAME:$VERSION -t $IMAGE_NAME:latest .
