@@ -1,9 +1,12 @@
 name: Publish Docker image
 
 on:
-  push:
-    tags:
-      - '*'
+  workflow_dispatch:
+    inputs:
+      environment:  # 自定义参数（可选）
+        description: 'Deploy environment'
+        required: true
+        default: 'production'
 jobs:
   build-and-push:
     runs-on: ubuntu-latest
