@@ -9,7 +9,7 @@ ENV XMODIFIERS=@im=fcitx
 RUN \
   echo "**** add icon ****" && \
   curl -o \
-    /kclient/public/icon.png \
+    /kclient/public/favicon.ico \
     https://open.weixin.qq.com/zh_CN/htmledition/res/assets/res-design-download/icon16_wx_logo.png && \
   echo "**** download packages ****" && \
   curl -o /tmp/WeChatLinux_x86_64.deb \
